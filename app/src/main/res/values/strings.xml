@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Droids Cafe</string>
+    <string name="action_settings">Settings</string>
+    <string name="droid_text">Droid Desserts</string>
+    <string name="donuts">Donuts are glazed and sprinkled with hundreds of thousands.</string>
+    <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate wafers and vanilla ice cream filling.</string>
+    <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
+
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
+    <string name="froyo_order_message">You ordered a FroYo.</string>
+    <string name="name">Name</string>
+    <string name="nameHint">Enter Your Name</string>
+    <string name="ursName">Name</string>
+    <string name="same_day_messenger_service">Same day messenger service</string>
+    <string name="next_day_ground_delivery">Next day ground delivery</string>
+    <string name="pick_up">Pick up</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="enter_additional_notes">Enter Additional Notes</string>
+    <string name="enter_your_address">Enter Your Address</string>
+    <string name="note">Note:</string>
+    <string name="choose_a_delivery_method">Choose a delivery method:</string>
+    <string name="textview">TextView</string>
+</resources>
