@@ -22,4 +22,12 @@
     <string name="note">Note:</string>
     <string name="choose_a_delivery_method">Choose a delivery method:</string>
     <string name="textview">TextView</string>
+
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>

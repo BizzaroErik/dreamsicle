@@ -1,20 +1,37 @@
 package com.example.droidscafe;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class OrderActivity extends AppCompatActivity {
+
+public class OrderActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
+
+        //spinner init, and setup
+        Spinner spin = findViewById(R.id.label_spinner);
+        if (spin != null) {
+            spin.setOnItemSelectedListener(this);
+        }
+        ArrayAdapter<CharSequence> spinAdapter = ArrayAdapter.createFromResource(this, R.array.labels_array, android.R.layout.simple_spinner_item);
+        spinAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        if(spin != null){
+            spin.setAdapter(spinAdapter);
+        }
+
+        //unpack the sent data
         Intent intent = getIntent();
         String message = "Order: " + intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
@@ -51,5 +68,16 @@ public class OrderActivity extends AppCompatActivity {
     public void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String spinnerLabel = adapterView.getItemAtPosition(i).toString();
+        displayToast(spinnerLabel);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
